@@ -1,0 +1,113 @@
+@import "tailwindcss";
+@theme {
+    /* Primary */
+    --color-saas: #F97316;
+    --color-primary: #ff5500;
+    --color-destructive: #e74c3c;
+
+    --color-primary-foreground: #1a0f0a;
+    --color-darkBG: #0f0e0d;
+    --color-black-bg: #121212;
+    --color-light-bg: #F8F8F8;
+    /* saas-darkGray for submenu*/
+    --color-darkGray: #222222;
+    /* Social Media */
+    --color-twitter: #1da1f2;
+    --color-facebook: #3b5998;
+    --color-linkedin: #0a66c2;
+
+    --fade-in: fadingUp 1s ease-in-out forwards;
+    @keyframes fadingUp {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+@layer components {
+    /* Basic Settings */
+    button {
+        /* @apply cursor-pointer outline-0  */
+    }
+    .main-container {
+        @apply w-full sm:max-w-11/12 lg:max-w-10/12 xl:max-w-7xl mx-auto px-4 md:px-6;
+    }
+    .section-container {
+        @apply w-full sm:max-w-11/12 lg:max-w-10/12 xl:max-w-7xl mx-auto px-4 md:px-6 py-20 max-md:py-14;
+    }
+    .main-btn,
+    .main-link {
+        /* @apply py-1.5 px-4 bg-primary text-white text-sm font-bold tracking-wide rounded-lg duration-300 transition-colors hover:bg-destructive; */
+        @apply py-2.5 px-4 bg-saas text-white text-sm font-bold tracking-wide rounded-lg duration-300 transition-colors hover:bg-primary;
+    }
+    .secondary-btn,
+    .secondary-link {
+        @apply py-2.5 px-4 bg-neutral-900 text-saas ring-1 ring-saas text-sm font-bold tracking-wide rounded-lg duration-300 transition-colors hover:bg-saas hover:ring-transparent hover:text-white;
+    }
+    .nav-links a {
+        @apply font-medium text-white [&.active]:text-primary hover:text-primary duration-300 transition-colors px-4 py-2
+    }
+    .text-gradient {
+        @apply bg-clip-text text-transparent fill-transparent bg-gradient-to-l from-orange-400 to-orange-600;
+    }
+    .bg-main-gradient {
+        @apply bg-gradient-to-r from-[#121212] to-[#1c160c];
+    }
+    .main-heading h2 {
+        @apply text-3xl md:text-4xl text-white font-bold text-center mb-5;
+    }
+    .main-heading h2 + p {
+        @apply text-sm md:text-lg text-gray-400 text-center max-w-3xl mx-auto;
+    }
+    .main-color-transition {
+        @apply duration-300 transition-colors;
+    }
+}
+nav.open {
+    @apply fixed top-16 left-0 w-full z-50 bg-darkGray;
+}
+nav.open a {
+    @apply px-0;
+}
+* {
+    scroll-behavior: smooth;
+}
+:root {
+    --background: #100f0e;
+--foreground: #f3f1f0;
+
+--card: #1a1918;
+--card-foreground: #f3f1f0;
+
+--popover: #100f0e;
+--popover-foreground: #f3f1f0;
+
+--primary: #ff6600;
+--primary-foreground: #1c1816;
+
+--secondary: #282524;
+--secondary-foreground: #f3f1f0;
+
+--muted: #282524;
+--muted-foreground: #aaa4a1;
+
+--accent: #ff6600;
+--accent-foreground: #1c1816;
+
+--destructive: #ee4444;
+--destructive-foreground: #f3f1f0;
+
+--border: #353230;
+--input: #353230;
+--ring: #ff6600;
+
+--twitter: #1ca0f1;
+--facebook: #3a5796;
+--linkedin: #0a65c1;
+
+}
+
