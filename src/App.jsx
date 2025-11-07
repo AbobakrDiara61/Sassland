@@ -12,8 +12,8 @@ function App() {
       <Header />
       <main className='pt-16'>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/docs" element={<>Docs</>} />
+          <Route path="/Sassland/" element={<Home />} />
+          <Route path="/Sassland/docs" element={<>Docs</>} />
         </Routes>
       <Footer />
       </main>

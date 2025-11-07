@@ -11,7 +11,7 @@
     "preview": "vite preview",
 
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist https://github.com/AbobakrDiara61/Sassland"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.0.1",
